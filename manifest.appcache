@@ -1,0 +1,18 @@
+CACHE MANIFEST
+# 2013-05-24: v1.18.0b
+
+CACHE:
+index.html 
+
+js/funtion.js
+
+fo/Cabin-Regular-webfont.svg
+
+im/cross.png
+
+
+NETWORK:
+*
+
+FALLBACK:
+offline.html
