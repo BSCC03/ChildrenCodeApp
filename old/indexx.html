@@ -1,0 +1,83 @@
+<!DOCTYPE html> 
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<title>Single page template</title> 
+    
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.css" />
+    <link rel="stylesheet" href="cs/style.css">
+    
+	<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.js"></script>
+    <script type="text/javascript" src="lib/interact.js-master/interact.js-master/interact.js"</script>
+    <script type="text/javascript" src="lib/interact_funtions.js"></script>
+    <script>
+        $( document ).on( "pageinit", "#demo-page", function() {
+    $( document ).on( "swipeleft swiperight", "#demo-page", function( e ) {
+        // We check if there is no open panel on the page because otherwise
+        // a swipe to close the left panel would also open the right panel (and v.v.).
+        // We do this by checking the data that the framework stores on the page element (panel: open).
+        if ( $.mobile.activePage.jqmData( "panel" ) !== "open" ) {
+            if ( e.type === "swipeleft"  ) {
+                $( "#right-panel" ).panel( "open" );
+            } else if ( e.type === "swiperight" ) {
+                $( "#left-panel" ).panel( "open" );
+            }
+        }
+    });
+});
+    </script>
+    <style>
+        /* Swipe works with mouse as well but often causes text selection. */
+#demo-page * {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+/* Arrow only buttons in the header. */
+#demo-page .ui-header .ui-btn {
+    background: none;
+    border: none;
+    top: 9px;
+}
+#demo-page .ui-header .ui-btn-inner {
+    border: none;
+}
+/* Content styling. */
+dl { font-family: "Times New Roman", Times, serif; padding: 1em; }
+dt { font-size: 2em; font-weight: bold; }
+dt span { font-size: .5em; color: #777; margin-left: .5em; }
+dd { font-size: 1.25em; margin: 1em 0 0; padding-bottom: 1em; border-bottom: 1px solid #eee; }
+.back-btn { float: right; margin: 0 2em 1em 0; }
+    </style>
+</head> 
+
+<body> 
+
+<div data-role="page" id="demo-page" data-theme="d" data-url="demo-page" tabindex="0" class="ui-page ui-page-panel ui-page-active ui-body-d" style="min-height: 640px;">
+    <div class="ui-panel-content-wrap ui-body-d ui-panel-animate ui-panel-content-wrap-closed"><div data-role="header" data-theme="b" class="ui-header ui-bar-b" role="banner">
+        <h1 class="ui-title" role="heading" aria-level="1">Swipe left or right</h1>
+        <a href="#left-panel" data-theme="d" data-icon="arrow-r" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc ui-btn-left ui-btn ui-btn-up-d ui-btn-corner-all ui-btn-icon-notext" data-corners="true" data-wrapperels="span" title="Open left panel"><span class="ui-btn-inner"><span class="ui-btn-text">Open left panel</span><span class="ui-icon ui-icon-arrow-r"> </span></span></a>
+        <a href="#right-panel" data-theme="d" data-icon="arrow-l" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc ui-btn-right ui-btn ui-btn-up-d ui-btn-corner-all ui-btn-icon-notext" data-corners="true" data-wrapperels="span" title="Open right panel"><span class="ui-btn-inner"><span class="ui-btn-text">Open right panel</span><span class="ui-icon ui-icon-arrow-l"> </span></span></a>
+    </div><div data-role="content" class="ui-content" role="main">
+        <dl>
+            <dt>Swipe <span>verb</span></dt>
+            <dd><b>1.</b> to strike or move with a sweeping motion</dd>
+        </dl>
+        <a href="#demo-intro" data-rel="back" class="back-btn ui-btn ui-btn-up-d ui-shadow ui-btn-corner-all ui-mini ui-btn-inline ui-btn-icon-right ui-btn-active ui-focus" data-role="button" data-mini="true" data-inline="true" data-icon="back" data-iconpos="right" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="d"><span class="ui-btn-inner"><span class="ui-btn-text">Back to demo intro</span><span class="ui-icon ui-icon-back ui-icon-shadow"> </span></span></a>
+    </div></div><!-- /header -->
+    <!-- /content -->
+    <div data-role="panel" id="left-panel" data-theme="b" class="ui-panel ui-panel-position-left ui-panel-display-reveal ui-body-b ui-panel-animate ui-panel-closed">
+        <div class="ui-panel-inner"><p>Left reveal panel.</p><a href="#" data-rel="close" data-role="button" data-mini="true" data-inline="true" data-icon="delete" data-iconpos="right" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="d" class="ui-btn ui-btn-up-d ui-shadow ui-btn-corner-all ui-mini ui-btn-inline ui-btn-icon-right"><span class="ui-btn-inner"><span class="ui-btn-text">Close</span><span class="ui-icon ui-icon-delete ui-icon-shadow"> </span></span></a></div>
+    </div><!-- /panel -->
+    <div data-role="panel" id="right-panel" data-display="push" data-position="right" data-theme="c" class="ui-panel ui-panel-position-right ui-panel-display-push ui-body-c ui-panel-animate ui-panel-closed">
+        <div class="ui-panel-inner"><p>Right push panel.</p><a href="#" data-rel="close" data-role="button" data-mini="true" data-inline="true" data-icon="delete" data-iconpos="right" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="d" class="ui-btn ui-btn-up-d ui-shadow ui-btn-corner-all ui-mini ui-btn-inline ui-btn-icon-right"><span class="ui-btn-inner"><span class="ui-btn-text">Close</span><span class="ui-icon ui-icon-delete ui-icon-shadow"> </span></span></a></div>
+    </div><!-- /panel -->
+<div class="ui-panel-dismiss" data-panelid="left-panel"></div><div class="ui-panel-dismiss" data-panelid="right-panel"></div></div>
+
+</body>
+</html>

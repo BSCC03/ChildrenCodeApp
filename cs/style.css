@@ -1,4 +1,6 @@
 /* Style */
+[data-role=page]{height: 100% !important; position:relative !important;}
+[data-role=footer]{bottom:0; position:absolute !important; top: auto !important; width:100%;}  
 .title {
     background:#000;
     color:#fff;
@@ -50,3 +52,57 @@
 }
 
 .draggable.-drop-possible { background-color: #42bd41; }
+
+    .open a, .open a:hover {
+	padding: 7px 15px;
+	background-color: #000;
+	border-radius: 3px;
+}
+#page01 * {
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			-o-user-select: none;
+			user-select: none;
+		}
+		/* Arrow only buttons in the header. */
+		#page01 .ui-header .ui-btn {
+			background: none;
+			border: none;
+			top: 9px;
+		}
+		#page01 .ui-header .ui-btn-inner {
+			border: none;
+		}
+		/* Content styling. */
+		dl { font-family: 'Open Sans', sans-serif; padding: 1em; }
+		dt { font-size: 2em; font-weight: bold; }
+		dt span { font-size: .5em; color: #777; margin-left: .5em; }
+		dd { font-size: 1.25em;	margin: 1em 0 0; padding-bottom: 1em; border-bottom: 1px solid #eee; }
+		.back-btn { float: right; margin: 0 2em 1em 0; }
+
+.demo_circle {
+    display: inline-block;
+    margin-left: 10px;
+    margin-top: 10px;
+
+    border-radius: 50%;
+    
+	width: 50px;
+	height: 50px;
+	
+	background-image: -moz-radial-gradient(45px 45px 45deg, circle cover, yellow 0%, orange 100%, red 95%);
+	background-image: -webkit-radial-gradient(45px 45px, circle cover, yellow, orange);
+	background-image: radial-gradient(45px 45px 45deg, circle cover, yellow 0%, orange 100%, red 95%);
+}
+.demo_square {
+    display: inline-block;
+    margin-left: 10px;
+    
+	width: 20px;
+	height: 20px;
+	
+	background-image: -moz-radial-gradient(45px 45px 45deg, circle cover, yellow 0%, orange 100%, red 95%);
+	background-image: -webkit-radial-gradient(45px 45px, circle cover, yellow, orange);
+	background-image: radial-gradient(45px 45px 45deg, circle cover, yellow 0%, orange 100%, red 95%);
+}
