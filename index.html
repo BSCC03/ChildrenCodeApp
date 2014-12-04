@@ -58,8 +58,12 @@
     	<dl>
             <dt>Hack-Cess<span></span></dt>
             <dd>The worlds most amazing dynamic fantastic teaching app ever created in this universe.</dd>
-            <a href="#page02" data-role="button" data-theme="e">Start Coding</a>
-            <button type="button" onClick="onClick()">Click me</button>
+            <div data-role="fieldcontain">
+                <input onchange="changeThis();" type='text' id='theInput' value='Write here'/>
+            </div>	
+            </form>
+            <div id="username"></div>
+            <a href="#page02" data-role="button" data-theme="e">Start Learning</a>
         </dl>
 
     </div><!-- /content -->
@@ -68,10 +72,24 @@
 
     	<ul data-role="listview">
                 <li data-icon="delete"><a href="#" data-rel="close" data-icon="delete" data-iconpos="right">Close</a></li>
-                <li><a href="#panel-responsive-page2">Accordion</a></li>
-                <li><a href="#panel-responsive-page2">Ajax Navigation</a></li>
-                <li><a href="#panel-responsive-page2">Autocomplete</a></li>
-		</ul>
+                <li><a href="#page02">HTML Quiz</a></li>
+                <li><a href="#panel-responsive-page2">HTML5 Quiz</a></li>
+                <li><a href="#page03">CSS S</a></li>
+		</ul><br/><br/>
+        <h3>Badges</h3>
+        <img src="img/bag/Box%20Model.png" class="badge1">
+        <img src="img/bag/CSS.png" class="badge2">
+        <img src="img/bag/Div.png" class="badge3">
+        <img src="img/bag/Headings.png" class="badge4">
+        <img src="img/bag/HTML.png" class="badge5">
+        <img src="img/bag/ID.png" class="badge6">
+        <img src="img/bag/Image.png" class="badge7">
+        <img src="img/bag/Nesting.png" class="badge8">
+        <img src="img/bag/Tables.png" class="badge9">
+        <img src="img/bag/Paragraph.png" class="badge10">
+        <img src="img/bag/Tagging.png" class="badge11">
+        
+        
     </div><!-- /panel -->
 
     <div data-role="panel" id="right-panel" data-display="push" data-position="right" data-theme="c">
@@ -98,9 +116,31 @@
 <div data-role="page" id="page02">
 
 	<div data-role="header" data-theme="b">
-		<h1>Task 1</h1>
+		<h1>HTML Quiz</h1>
         <a href="#page01" data-theme="a" data-icon="home" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Home</a>
-		<a href="#" data-theme="a" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Next</a>
+		<a href="#page03" data-theme="a" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Next Topic</a>
+	</div><!-- /header -->
+
+	<div data-role="content" >	
+        <div class="quizContainer">
+            <div class="question"></div>
+            <ul class="choiceList"></ul>
+            <div class="quizMessage"></div>
+            <div class="result"></div>
+            <button type="button" class="nextButton"><span class="ui-button-text">Next Question</span></button>
+        </div>
+	</div><!-- /content -->
+    <div data-role="footer" data-theme="d">
+		<h4>Points: <a class="points_up">0</a></h4>
+	</div>
+</div><!-- /page one -->
+    
+<div data-role="page" id="page03">
+
+	<div data-role="header" data-theme="b">
+		<h1>CSS Quiz</h1>
+        <a href="#page01" data-theme="a" data-icon="home" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Home</a>
+		<a href="#" data-theme="a" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Next Topic</a>
 	</div><!-- /header -->
 
 	<div data-role="content" >	
@@ -115,22 +155,6 @@
     <div data-role="footer" data-theme="d">
 		<h4>Points: <a class="points_up">0</a></h4>
 	</div>
-</div><!-- /page one -->
-    
-    <div data-role="page" id="page03">
-
-	<div data-role="header" data-theme="b">
-		<h1>Task 1</h1>
-        <a href="#page01" data-theme="a" data-icon="home" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Home</a>
-		<a href="#" data-theme="a" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Next</a>
-	</div><!-- /header -->
-
-	<div data-role="content" >	
-        Quiz 2
-	</div><!-- /content -->
-    <div data-role="footer" data-theme="d">
-		<h4>Points: <a class="points_up">0</a></h4>
-	</div>
-</div><!-- /page one -->
+</div>
 </body>
 </html>

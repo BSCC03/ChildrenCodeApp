@@ -6,34 +6,40 @@
  * To change this template use File | Settings | File Templates.
  */
 
+//var questions = [{
+//    question: "What does HTML stand for?",
+//    choices: ["Home Tool Mark-up Language", "Hyperlinks and Text Mark-up Language", "Hyper Text Mark-up Language", "Hot Tanned Mannly Lines"],
+//    correctAnswer: 2
+//}, {
+//    question: "Who is making the Web standards?",
+//    choices: ["Mozilla", "Google", "Microsoft", "The World Wide Web Consortium"],
+//    correctAnswer: 3
+//}, {
+//    question: "Choose the correct HTML tag for the largest heading",
+//    choices: ["&lt;heading&gt;", "&lt;head&gt;", "&lt;h6&gt;", "&lt;h1&gt;"],
+//    correctAnswer: 3
+//}, {
+//    question: "What is the correct HTML tag for inserting a line break?",
+//    choices: ["&lt;lb&gt;", "&lt;br&gt;", "&lt;break&gt;", "&lt;line&gt;"],
+//    correctAnswer: 0
+//}, {
+//    question: "What is the preferred way for adding a background color in HTML?",
+//    choices: ["&lt;body background=&gt;", "&lt;body &gt;", "&lt;background&gt;yellow&lt;/background&gt;", "&lt;body background=&gt;"],
+//    correctAnswer: 3
+//}, {
+//    question: ". Choose the correct HTML tag to make a text bold",
+//    choices: ["&lt;bold&gt;", "&lt;head&gt;", "&lt;h6&gt;", "&lt;h1&gt;"],
+//    correctAnswer: 3
+//}, {
+//    question: "Choose the correct HTML tag for the largest heading",
+//    choices: ["&lt;heading&gt;", "&lt;head&gt;", "&lt;h6&gt;", "&lt;h1&gt;"],
+//    correctAnswer: 3
+//}];
+
 var questions = [{
-    question: "What does HTML stand for?",
-    choices: ["Home Tool Mark-up Language", "Hyperlinks and Text Mark-up Language", "Hyper Text Mark-up Language", "Hot Tanned Mannly Lines"],
-    correctAnswer: 2
-}, {
-    question: "Who is making the Web standards?",
-    choices: ["Mozilla", "Google", "Microsoft", "The World Wide Web Consortium"],
-    correctAnswer: 3
-}, {
-    question: "Choose the correct HTML tag for the largest heading",
-    choices: ["&lt;heading&gt;", "&lt;head&gt;", "&lt;h6&gt;", "&lt;h1&gt;"],
-    correctAnswer: 3
-}, {
-    question: "What is the correct HTML tag for inserting a line break?",
-    choices: ["&lt;lb&gt;", "&lt;br&gt;", "&lt;break&gt;", "&lt;line&gt;"],
-    correctAnswer: 0
-}, {
-    question: "What is the preferred way for adding a background color in HTML?",
-    choices: ["&lt;body background=&gt;", "&lt;body &gt;", "&lt;background&gt;yellow&lt;/background&gt;", "&lt;body background=&gt;"],
-    correctAnswer: 3
-}, {
-    question: ". Choose the correct HTML tag to make a text bold",
-    choices: ["&lt;bold&gt;", "&lt;head&gt;", "&lt;h6&gt;", "&lt;h1&gt;"],
-    correctAnswer: 3
-}, {
-    question: "Choose the correct HTML tag for the largest heading",
-    choices: ["&lt;heading&gt;", "&lt;head&gt;", "&lt;h6&gt;", "&lt;h1&gt;"],
-    correctAnswer: 3
+    question 1: ". What does HTML stand for?",
+    choices: ["Home Tool Mark-up Language", "Hyperlinks and Text Mark-up Language", "Hyper Text Mark-up Language", "Huge Text Make-up Language"],
+    correctAnswer: 2 //Correct awsner number 0,1,2,3
 }];
 
 var currentQuestion = 0;
@@ -70,14 +76,14 @@ $(document).ready(function () {
                     displayScore();
                     //                    $(document).find(".nextButton").toggle();
                     //                    $(document).find(".playAgainButton").toggle();
-                    // Change the text in the next button to ask if user wants to play again
-                    $(document).find(".nextButton").text("Play Again?");
+                    //Change the text in the next button to ask if user wants to play again
+                    $(document).find(".ui-button-text").text("Play Again?");
                     quizOver = true;
                 }
             }
         } else { // quiz is over and clicked the next button (which now displays 'Play Again?'
             quizOver = false;
-            $(document).find(".nextButton").text("Next Question");
+            $(document).find(".ui-button-text").text("Next Question");
             resetQuiz();
             displayCurrentQuestion();
             hideScore();
@@ -105,12 +111,11 @@ function displayCurrentQuestion() {
     var choice;
     for (i = 0; i < numChoices; i++) {
         choice = questions[currentQuestion].choices[i];
-        $('<li><input type="radio" value=' + i + ' name="dynradio" />' + choice + '</li>').appendTo(choiceList);
+        $('<li><input type=&quot;radio" value=' + i + ' name=&quot;dynradio" />' + choice + '</li>').appendTo(choiceList);
     }
 }
 function resetQuiz() {
     currentQuestion = 0;
-    correctAnswers = 0;
     hideScore();
 }
 
@@ -122,8 +127,31 @@ function displayScore() {
         document.getElementsByClassName("points_up")[i].innerHTML = correctAnswers;
         console.log(i);
     }
+    for(var i=1;i<13;i++)
+    {
+       if (correctAnswers == 5*i) {
+            $('.badge'+i).css('-webkit-filter', "grayscale(0)");
+        } 
+    }
+    
+//    if (correctAnswers == 5) {
+//        $('.badge1').css('-webkit-filter', "grayscale(0)");
+//    } else
+//    if (correctAnswers == 10) {
+//        $('.badge2').css('-webkit-filter', "grayscale(0)");
+//    } else
+//    if (correctAnswers == 15) {
+//        $('.badge3').css('-webkit-filter', "grayscale(0)");
+//    } else
 }
 
 function hideScore() {
     $(document).find(".result").hide();
 }
+
+function changeThis(){
+	var formInput = document.getElementById('theInput').value;
+	document.getElementsByClassName('username').innerHTML = formInput;
+}
+
+
