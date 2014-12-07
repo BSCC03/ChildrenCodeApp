@@ -6,40 +6,90 @@
  * To change this template use File | Settings | File Templates.
  */
 
-//var questions = [{
-//    question: "What does HTML stand for?",
-//    choices: ["Home Tool Mark-up Language", "Hyperlinks and Text Mark-up Language", "Hyper Text Mark-up Language", "Hot Tanned Mannly Lines"],
-//    correctAnswer: 2
-//}, {
-//    question: "Who is making the Web standards?",
-//    choices: ["Mozilla", "Google", "Microsoft", "The World Wide Web Consortium"],
-//    correctAnswer: 3
-//}, {
-//    question: "Choose the correct HTML tag for the largest heading",
-//    choices: ["&lt;heading&gt;", "&lt;head&gt;", "&lt;h6&gt;", "&lt;h1&gt;"],
-//    correctAnswer: 3
-//}, {
-//    question: "What is the correct HTML tag for inserting a line break?",
-//    choices: ["&lt;lb&gt;", "&lt;br&gt;", "&lt;break&gt;", "&lt;line&gt;"],
-//    correctAnswer: 0
-//}, {
-//    question: "What is the preferred way for adding a background color in HTML?",
-//    choices: ["&lt;body background=&gt;", "&lt;body &gt;", "&lt;background&gt;yellow&lt;/background&gt;", "&lt;body background=&gt;"],
-//    correctAnswer: 3
-//}, {
-//    question: ". Choose the correct HTML tag to make a text bold",
-//    choices: ["&lt;bold&gt;", "&lt;head&gt;", "&lt;h6&gt;", "&lt;h1&gt;"],
-//    correctAnswer: 3
-//}, {
-//    question: "Choose the correct HTML tag for the largest heading",
-//    choices: ["&lt;heading&gt;", "&lt;head&gt;", "&lt;h6&gt;", "&lt;h1&gt;"],
-//    correctAnswer: 3
-//}];
-
 var questions = [{
-    question 1: ". What does HTML stand for?",
+    question: ". What does HTML stand for?",
     choices: ["Home Tool Mark-up Language", "Hyperlinks and Text Mark-up Language", "Hyper Text Mark-up Language", "Huge Text Make-up Language"],
     correctAnswer: 2 //Correct awsner number 0,1,2,3
+}, {
+    question: "Who is making the Web standards?",
+    choices: ["Mozilla", "Google", "Microsoft", "The World Wide Web Consortium"],
+    correctAnswer: 3
+}, {
+    question: "Choose the correct HTML tag for the largest heading",
+    choices: ["&lt;heading&gt;", "&lt;head&gt;", "&lt;h6&gt;", "&lt;h1&gt;"],
+    correctAnswer: 3
+}, {
+    question: "What is the correct HTML tag for inserting a line break?",
+    choices: ["&lt;lb&gt;", "&lt;br&gt;", "&lt;break&gt;", "&lt;line&gt;"],
+    correctAnswer: 2
+}, {
+    question: "What is the preferred way for adding a background color in HTML?",
+    choices: ["&lt;body background=&gt;", "&lt;body &gt;", "&lt;background&gt;yellow&lt;/background&gt;", "&lt;body background=&gt;"],
+    correctAnswer: 2
+}, {
+    question: "Choose the correct HTML tag to make a text bold?",
+    choices: ["&lt;bold&gt;", "&lt;head&gt;", "&lt;h6&gt;", "&lt;h1&gt;"],
+    correctAnswer: 2
+}, {
+    question: " Choose the correct HTML tag to make a text italic?",
+    choices: ["&lt;i&gt;", "&lt;italic&gt;", "italic/&gt;", "&lt;h1&gt;"],
+    correctAnswer: 0
+}, {
+    question: "What is the correct HTML for creating a hyperlink?",
+    choices: ["&lt;a name=&quot;http:&quot;&gt; &lt;/a&gt;", "&lt;a href&quot;http:&quot;&gt; &lt;/a&gt;","&lt;break&gt;", "&lt;line&gt;"],
+    correctAnswer: 1
+}, {
+    question: " How can you create an e-mail link?",
+    choices: ["&lt;mail href=&quot;xxx@yyy&quot;&gt;", "&lt;br&gt;", "&lt;a href=&quot;mailto:xxx@yyy&quot;&gt;", "&lt;line&gt;"],
+    correctAnswer: 2
+}, {
+    question: "How can you open a link in a new tab/browser window?",
+    choices: ["&lt;lb&gt;", "&lt;a href=&quot;url&quot; new&gt;", "&lt;break&gt;", "&lt;a href=&quot;url&quot; target=&quot;_blank&quot;&gt;"],
+    correctAnswer: 3
+}, {
+    question: " Which of these tags are all <table> tags?",
+    choices: ["&lt;table&gt;&lt;head&gt;&lt;tfoot&gt;", " &lt;table&gt;&lt;tr&gt;&lt;td&gt;", "&lt;break&gt;", "&lt;line&gt;"],
+    correctAnswer: 1
+}, {
+    question: "In HTML, inline elements are normally displayed without starting a new line.?",
+    choices: ["True", "False", "Both", "None of the Above"],
+    correctAnswer: 0
+}, {
+    question: "How can you make a numbered list?",
+    choices: ["&lt;dl&gt;", "&lt;list&gt;", "&lt;ol&gt;", "&lt;ul&gt;"],
+    correctAnswer: 2
+}, {
+    question: "How can you make a bulleted list?",
+    choices: ["&lt;ul&gt;", "&lt;list&gt;", "&lt;ol&gt;", "&lt;dl&gt;"],
+    correctAnswer: 0
+}, {
+    question: "What is the correct HTML for making a checkbox?",
+    choices: ["&lt;check&gt;", "&lt;input type=&quot;check&quot;&gt;", "lt;input type=&quot;checkbox&quot;&gt;", "&lt;line&gt;"],
+    correctAnswer: 2
+},{           
+    question: "What is the correct HTML for making a drop-down list?",
+    choices: ["&lt;list&gt;", "&lt;input type=&quot;list&quot;&gt;", "&lt;select&gt;", "&lt;dl&gt;"],
+    correctAnswer: 2
+},{           
+    question: "What is the correct HTML for making a text area?",
+    choices: ["&lt;input type=&quot;textarea&quot;&gt;", "&lt;input type=&quot;textbox&quot;&gt;", "&lt;input type=&quot;text&quot;&gt;", "&lt;textarea&gt;"],
+    correctAnswer: 3
+},{           
+    question: "What is the correct HTML for inserting an image?",
+    choices: ["&lt;img src=&quot;image.gif&quot; alt=&quot;MyImage&quot;&gt;", "&lt;image src=&quot;image.gif&quot; alt&quot;MyImage&quot;&gt;", "&lt;input type=&quot;text&quot;&gt;", "&lt;img alt=&quot;MyImage&quot;&gt;image.gif&lt;/img&gt;"],
+    correctAnswer: 0
+},{           
+    question: "What is the correct HTML for inserting a background image?",
+    choices: ["&lt;img src=&quot;image.gif&quot; alt=&quot;MyImage&quot;&gt;", "&lt;body background=&quot;background.gif&quot;&gt;", 
+              " &lt;background img=&quot;background.gif&quot;&gt;", "&lt;img alt=&quot;MyImage&quot;&gt;image.gif&lt;/img&gt;"],
+    correctAnswer: 1
+}, {           
+    question: "What is the correct HTML for making a text input field?",
+    choices: ["&lt;textinput type=&quot;text&quot;&gt;", " &lt;input type=&quot;textfield&quot;&gt;", 
+              " &lt;background img=&quot;background.gif&quot;&gt;", "&lt;input type=&quot;text&quot;&gt;"],
+    correctAnswer: 3
+                           
+     
 }];
 
 var currentQuestion = 0;
@@ -76,7 +126,7 @@ $(document).ready(function () {
                     displayScore();
                     //                    $(document).find(".nextButton").toggle();
                     //                    $(document).find(".playAgainButton").toggle();
-                    //Change the text in the next button to ask if user wants to play again
+                    // Change the text in the next button to ask if user wants to play again
                     $(document).find(".ui-button-text").text("Play Again?");
                     quizOver = true;
                 }
@@ -106,14 +156,18 @@ function displayCurrentQuestion() {
     $(questionClass).text(question);
 
     // Remove all current <li> elements (if any)
-    $(choiceList).find("li").remove();
+    $(choiceList).find("input").remove();
+    $(choiceList).find("lable").remove();
 
     var choice;
     for (i = 0; i < numChoices; i++) {
         choice = questions[currentQuestion].choices[i];
-        $('<li><input type=&quot;radio" value=' + i + ' name=&quot;dynradio" />' + choice + '</li>').appendTo(choiceList);
+        $('<input type="radio" value=' + i + ' name="radio-choice" id="radio-choice-'+i+'" /><lable for="radio-choice-'+i+'">' + choice + '</lable>').appendTo(choiceList);
     }
+//    $("input[type='radio']").checkboxradio().checkboxradio("refresh"); 
+//    $("#quiz").trigger("create");
 }
+
 function resetQuiz() {
     currentQuestion = 0;
     hideScore();
@@ -133,16 +187,6 @@ function displayScore() {
             $('.badge'+i).css('-webkit-filter', "grayscale(0)");
         } 
     }
-    
-//    if (correctAnswers == 5) {
-//        $('.badge1').css('-webkit-filter', "grayscale(0)");
-//    } else
-//    if (correctAnswers == 10) {
-//        $('.badge2').css('-webkit-filter', "grayscale(0)");
-//    } else
-//    if (correctAnswers == 15) {
-//        $('.badge3').css('-webkit-filter', "grayscale(0)");
-//    } else
 }
 
 function hideScore() {
@@ -150,8 +194,8 @@ function hideScore() {
 }
 
 function changeThis(){
-	var formInput = document.getElementById('theInput').value;
-	document.getElementsByClassName('username').innerHTML = formInput;
+	var formInput = document.getElementById("theInput").value;
+	document.getElementById("aboutMe").innerHTML = formInput;
 }
 
 

@@ -66,6 +66,20 @@
             <div data-role="fieldcontain">
                 <input type="text" placeholder="Pick your Name" onchange="changeThis()" id="theInput"/>
             </div>	
+            <fieldset data-role="controlgroup">
+	<legend>Choose a pet:</legend>
+     	<input type="radio" name="radio-choice" id="radio-choice-1" value="1" checked="checked" />
+     	<label for="radio-choice-1">Cat</label>
+
+     	<input type="radio" name="radio-choice" id="radio-choice-1" value="2"  />
+     	<label for="radio-choice-2">Dog</label>
+
+     	<input type="radio" name="radio-choice" id="radio-choice-1" value="3"  />
+     	<label for="radio-choice-3">Hamster</label>
+
+     	<input type="radio" name="radio-choice" id="radio-choice-2" value="4"  />
+     	<label for="radio-choice-4">Lizard</label>
+</fieldset>
         </dl>
 
     </div><!-- /content -->
@@ -91,19 +105,17 @@
 
     <div data-role="panel" id="right-panel" data-display="push" data-position="right" data-theme="c">
 
-        <h3>Avatars</h3>
-        <img src="img/av/1.png" class="av1">
-        <img src="img/av/2.png" class="av2">
-        <img src="img/av/3.png" class="av3">
-        <img src="img/av/4.png" class="av4">
-        <img src="img/av/5.png" class="av5">
-        <img src="img/av/6.png" class="av6">
-        
+    	<h2>Customise</h2>
+        <h3>Avatar</h3>
+        <div class="demo_circle"></div> <div class="demo_circle"></div> <div class="demo_circle"></div>
         <h3>Backgound</h3>
-        <div class="demo_square red"></div> <div class="demo_square green"></div> <div class="demo_square blue"></div> <div class="demo_square black"></div> <div class="demo_square yellow"></div>
-        <div class="demo_square red"></div> <div class="demo_square blue"></div> <div class="demo_square black"></div> <div class="demo_square yellow"></div> <div class="demo_square green"></div>
-        <h3>Hints</h3>
-        <p>Click the right awsner</p>
+        <div class="demo_square"></div> <div class="demo_square"></div> <div class="demo_square"></div> <div class="demo_square"></div> <div class="demo_square"></div> <div class="demo_square"></div> <div class="demo_square"></div> <div class="demo_square"></div> <div class="demo_square"></div> <div class="demo_square"></div> <div class="demo_square"></div>
+        <h3>Fonts</h3>
+        <div class="demo_fonts"></div>
+        
+        
+		<a href="#" data-rel="close" data-role="button" data-mini="true" data-inline="true" data-icon="delete" data-iconpos="right">Close</a>
+
     </div><!-- /panel -->
     
     <div data-role="footer" data-theme="d">
@@ -121,10 +133,9 @@
 	</div><!-- /header -->
 
 	<div data-role="content" >	
-        <div class="quizContainer" id="quiz">
-            <div class="question" id="q"></div>
-            <fieldset data-role="controlgroup" class="choiceList">
-            </fieldset>
+        <div class="quizContainer">
+            <div class="question"></div>
+            <ul class="choiceList"></ul>
             <div class="quizMessage"></div>
             <div class="result"></div>
             <button type="button" class="nextButton"><span class="ui-button-text">Next Question</span></button>
@@ -402,7 +413,7 @@
 	</div><!-- /content -->
 </div>
     
-<div data-role="page" id="page04">
+    <div data-role="page" id="page04">
 
 	<div data-role="header" data-theme="b">
 		<h1>CSS Tutorial</h1>

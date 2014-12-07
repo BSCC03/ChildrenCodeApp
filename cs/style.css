@@ -1,6 +1,7 @@
 /* Style */
 [data-role=page]{height: 100% !important; position:relative !important;}
 [data-role=footer]{bottom:0; position:absolute !important; top: auto !important; width:100%;}  
+#homebut .ui-btn { height: 50px; font-size: 48px; line-height:30px;  }
 .title {
     background:#000;
     color:#fff;
@@ -98,14 +99,27 @@
 .demo_square {
     display: inline-block;
     margin-left: 10px;
+    margin-top: 5px;
     
-	width: 20px;
-	height: 20px;
-	
-	background-image: -moz-radial-gradient(45px 45px 45deg, circle cover, yellow 0%, orange 100%, red 95%);
-	background-image: -webkit-radial-gradient(45px 45px, circle cover, yellow, orange);
-	background-image: radial-gradient(45px 45px 45deg, circle cover, yellow 0%, orange 100%, red 95%);
+	width: 40px;
+	height: 40px;
 }
+.red {
+    background: red;
+}
+.blue {
+    background: blue;
+}
+.black {
+    background: black;
+}
+.yellow {
+    background: yellow;
+}
+.green {
+    background: green;
+} 
+
 img {
     width: 80px;
     height: 80px;
