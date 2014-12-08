@@ -7,90 +7,88 @@
  */
 
 var questions = [{
-    question: ". What does HTML stand for?",
-    choices: ["Home Tool Mark-up Language", "Hyperlinks and Text Mark-up Language", "Hyper Text Mark-up Language", "Huge Text Make-up Language"],
-    correctAnswer: 2 //Correct awsner number 0,1,2,3
+    question: "What does CSS stand for?",
+    choices: ["Creative Style Sheets", "Computer Style Sheets", "Cascading Style Sheets", "Colorful Style Sheets"],
+    correctAnswer: 2 
 }, {
-    question: "Who is making the Web standards?",
-    choices: ["Mozilla", "Google", "Microsoft", "The World Wide Web Consortium"],
+    question: "What is the correct HTML for referring to an external style sheet?",
+    choices: ["&lt;style src=&quot;mystyle.css&quot;&gt;", "&lt;stylesheet&gt;mystyle.css&lt;/stylesheet&gt;", "&lt;style sr=&quot;mystyle.cssss&quot;&gt;", "&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;mystyle.css&quot;&gt;"],
     correctAnswer: 3
 }, {
-    question: "Choose the correct HTML tag for the largest heading",
-    choices: ["&lt;heading&gt;", "&lt;head&gt;", "&lt;h6&gt;", "&lt;h1&gt;"],
-    correctAnswer: 3
-}, {
-    question: "What is the correct HTML tag for inserting a line break?",
-    choices: ["&lt;lb&gt;", "&lt;br&gt;", "&lt;break&gt;", "&lt;line&gt;"],
-    correctAnswer: 2
-}, {
-    question: "What is the preferred way for adding a background color in HTML?",
-    choices: ["&lt;body background=&gt;", "&lt;body &gt;", "&lt;background&gt;yellow&lt;/background&gt;", "&lt;body background=&gt;"],
-    correctAnswer: 2
-}, {
-    question: "Choose the correct HTML tag to make a text bold?",
-    choices: ["&lt;bold&gt;", "&lt;head&gt;", "&lt;h6&gt;", "&lt;h1&gt;"],
-    correctAnswer: 2
-}, {
-    question: " Choose the correct HTML tag to make a text italic?",
-    choices: ["&lt;i&gt;", "&lt;italic&gt;", "italic/&gt;", "&lt;h1&gt;"],
-    correctAnswer: 0
-}, {
-    question: "What is the correct HTML for creating a hyperlink?",
-    choices: ["&lt;a name=&quot;http:&quot;&gt; &lt;/a&gt;", "&lt;a href&quot;http:&quot;&gt; &lt;/a&gt;","&lt;break&gt;", "&lt;line&gt;"],
+    question: "Where in an HTML document is the correct place to refer to an external style sheet?",
+    choices: ["In the &lt;body&gt; section", "In the &lt;head&gt; section", "At the top of the document", 
+    "At the end of the document"],
     correctAnswer: 1
 }, {
-    question: " How can you create an e-mail link?",
-    choices: ["&lt;mail href=&quot;xxx@yyy&quot;&gt;", "&lt;br&gt;", "&lt;a href=&quot;mailto:xxx@yyy&quot;&gt;", "&lt;line&gt;"],
-    correctAnswer: 2
-}, {
-    question: "How can you open a link in a new tab/browser window?",
-    choices: ["&lt;lb&gt;", "&lt;a href=&quot;url&quot; new&gt;", "&lt;break&gt;", "&lt;a href=&quot;url&quot; target=&quot;_blank&quot;&gt;"],
-    correctAnswer: 3
-}, {
-    question: " Which of these tags are all <table> tags?",
-    choices: ["&lt;table&gt;&lt;head&gt;&lt;tfoot&gt;", " &lt;table&gt;&lt;tr&gt;&lt;td&gt;", "&lt;break&gt;", "&lt;line&gt;"],
+    question: "Which HTML tag is used to define an internal style sheet?",
+    choices: ["&lt;css&gt;", "&lt;style&gt;", " &lt;script&gt;", "&lt;line&gt;"],
     correctAnswer: 1
 }, {
-    question: "In HTML, inline elements are normally displayed without starting a new line.?",
-    choices: ["True", "False", "Both", "None of the Above"],
+    question: "Which HTML attribute is used to define inline styles?",
+    choices: ["Style", "styles", "class", "font"],
     correctAnswer: 0
 }, {
-    question: "How can you make a numbered list?",
-    choices: ["&lt;dl&gt;", "&lt;list&gt;", "&lt;ol&gt;", "&lt;ul&gt;"],
-    correctAnswer: 2
-}, {
-    question: "How can you make a bulleted list?",
-    choices: ["&lt;ul&gt;", "&lt;list&gt;", "&lt;ol&gt;", "&lt;dl&gt;"],
+    question: "Which is the correct CSS syntax?",
+    choices: [" body {color: black;}", "body:color=black;", " {body;color:black;}", "&lt;h1&gt;"],
     correctAnswer: 0
 }, {
-    question: "What is the correct HTML for making a checkbox?",
-    choices: ["&lt;check&gt;", "&lt;input type=&quot;check&quot;&gt;", "lt;input type=&quot;checkbox&quot;&gt;", "&lt;line&gt;"],
+    question: "How do you insert a comment in a CSS file",
+    choices: ["// this is a comment", "/* this is a comment */", "italic/&gt;", "// this is a comment //"],
+    correctAnswer: 1    
+}, {
+    question: "Which property is used to change the background color?",
+    choices: ["Color", "Bgcolor","Background-color", "Backgroundcolor"],
     correctAnswer: 2
-},{           
-    question: "What is the correct HTML for making a drop-down list?",
-    choices: ["&lt;list&gt;", "&lt;input type=&quot;list&quot;&gt;", "&lt;select&gt;", "&lt;dl&gt;"],
-    correctAnswer: 2
-},{           
-    question: "What is the correct HTML for making a text area?",
-    choices: ["&lt;input type=&quot;textarea&quot;&gt;", "&lt;input type=&quot;textbox&quot;&gt;", "&lt;input type=&quot;text&quot;&gt;", "&lt;textarea&gt;"],
-    correctAnswer: 3
-},{           
-    question: "What is the correct HTML for inserting an image?",
-    choices: ["&lt;img src=&quot;image.gif&quot; alt=&quot;MyImage&quot;&gt;", "&lt;image src=&quot;image.gif&quot; alt&quot;MyImage&quot;&gt;", "&lt;input type=&quot;text&quot;&gt;", "&lt;img alt=&quot;MyImage&quot;&gt;image.gif&lt;/img&gt;"],
+}, {
+    question: "How do you add a background color for all <h1> elements?",
+    choices: ["h1 {background-color:#FFFFFF;}", "h1.all {background-color:#FFFFFF;}", "all.h1 {background-color:#FFFFFF;}", "&lt;line&gt;"],
     correctAnswer: 0
-},{           
-    question: "What is the correct HTML for inserting a background image?",
-    choices: ["&lt;img src=&quot;image.gif&quot; alt=&quot;MyImage&quot;&gt;", "&lt;body background=&quot;background.gif&quot;&gt;", 
-              " &lt;background img=&quot;background.gif&quot;&gt;", "&lt;img alt=&quot;MyImage&quot;&gt;image.gif&lt;/img&gt;"],
+}, {
+    question: "Which CSS property is used to change the text color of an element?",
+    choices: ["text-color", "color", "fgcolor", "bgcolor"],
     correctAnswer: 1
+}, {
+    question: "Which CSS property controls the text size?",
+    choices: ["font-style", "text-size", "text-style", "font-size"],
+    correctAnswer: 3
+}, {
+    question: "What is the correct CSS syntax for making all the <p> elements bold?",
+    choices: ["&lt;p &gt;", "&lt;p &gt;", " p {text-size:bold;}", "p {font-weight:bold;}"],
+    correctAnswer: 3
+}, {
+    question: "How do you display hyperlinks without an underline",
+    choices: ["a {text-decoration:none;}", "a {decoration:no-underline;}", "& a {underline:none;}", " a {text-decoration:no-underline}"],
+    correctAnswer: 0
+}, {
+    question: "How do you make each word in a text start with a capital letter?",
+    choices: ["text-transform:uppercase", "You can't do that with CSS", "Text-transform:capitalize", "text-transform:lowercase"],
+    correctAnswer: 2
+}, {
+    question: "Which property is used to change the font of an element?",
+    choices: ["font", "font-family", "Both font-family and font can be used", "None of the above"],
+    correctAnswer: 2
+},{           
+    question: "How do you make the text bold?",
+    choices: ["font:bold;", "style:bold;", "font-weight:bold;", "weight:bold;"],
+    correctAnswer: 2
+},{           
+    question: "How do you display a border like this<br/>The top border = ten pixels<br/>The bottom border = five pixele<br/>The left border = twenty pixels<br/>The right border = one pixel?",
+    choices: ["border-width:10px 1px 5px 20px;", "border-width:10px 20px 5px 1px;", "border-width:10px 5px 20px 1px;", "border-width:5px 20px 10px 1px;"],
+    correctAnswer: 0
+},{           
+    question: "How do you change the left margin of an element?",
+    choices: ["Indent", "padding-left", "margin-left", "margin-right"],
+    correctAnswer: 2
+},{           
+    question: "To define the space between the element's border and content, you use the padding property, but are you allowed to use negative values?",    
+    choices: ["No", "Yes", " None of the above", "Both"],
+    correctAnswer: 0
 }, {           
-    question: "What is the correct HTML for making a text input field?",
-    choices: ["&lt;textinput type=&quot;text&quot;&gt;", " &lt;input type=&quot;textfield&quot;&gt;", 
-              " &lt;background img=&quot;background.gif&quot;&gt;", "&lt;input type=&quot;text&quot;&gt;"],
-    correctAnswer: 3
-                           
-     
-}];
+    question: "How do you make a list that lists its items with squares?",
+    choices: ["list-style-type: square;", " list-type: square;", 
+              " list: square;", "list-: square;"],
+    correctAnswer: 0                      
+    }];
 
 var currentQuestion = 0;
 var correctAnswers = 0;

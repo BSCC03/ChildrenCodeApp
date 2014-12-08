@@ -2,6 +2,7 @@
 [data-role=page]{height: 100% !important; position:relative !important;}
 [data-role=footer]{bottom:0; position:absolute !important; top: auto !important; width:100%;}  
 #homebut .ui-btn { height: 50px; font-size: 48px; line-height:30px;  }
+* {-webkit-padding-start: 0px;}
 .title {
     background:#000;
     color:#fff;
