@@ -129,3 +129,9 @@ img {
 .badge1, .badge2, .badge3, .badge4, .badge5, .badge6, .badge7, .badge8, .badge9, .badge10, .badge11, .badge12 {
     -webkit-filter: grayscale(1);
 }
+.av {
+    -webkit-filter: grayscale(1);
+}
+.av:hover {
+    -webkit-filter: grayscale(0);
+}

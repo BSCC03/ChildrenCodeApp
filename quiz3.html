@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Copy this -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Open panel on swipe - jQuery Mobile Demos</title>
+    
+	<link rel="stylesheet"  href="http://demos.jquerymobile.com/1.3.2/css/themes/default/jquery.mobile-1.3.2.min.css">
+	<link rel="stylesheet" href="http://demos.jquerymobile.com/1.3.2/_assets/css/jqm-demos.css">
+    
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    
+	<script src="http://demos.jquerymobile.com/1.3.2/js/jquery.js"></script>
+	<script src="http://demos.jquerymobile.com/1.3.2/_assets/js/index.js"></script>
+	<script src="http://demos.jquerymobile.com/1.3.2/js/jquery.mobile-1.3.2.min.js"></script>
+    
+    <!--Quix-->
+    <link rel="stylesheet" type="text/css" href="http://jquizme.googlecode.com/hg/releases/pre-release%20of%20jQuizMe%202.2%20fixed/jQuizMe-2.2.css"/>
+<!-- End -->
+    
+    <link rel="stylesheet" href="cs/style.css">
+
+	<script>
+		$( document ).on( "pageinit", "#page01", "#page02", function() {
+
+			$( document ).on( "swipeleft swiperight", "#page01", "#page02", function( e ) {
+				// We check if there is no open panel on the page because otherwise
+				// a swipe to close the left panel would also open the right panel (and v.v.).
+				// We do this by checking the data that the framework stores on the page element (panel: open).
+				if ( $.mobile.activePage.jqmData( "panel" ) !== "open" ) {
+					if ( e.type === "swipeleft"  ) {
+						$( "#right-panel" ).panel( "open" );
+					} else if ( e.type === "swiperight" ) {
+						$( "#left-panel" ).panel( "open" );
+					}
+				}
+			});
+		});
+        
+    </script>
+</head>
+<body>
+<script src="js/var.js"></script>
+<script src="js/funtions_html5.js"></script>
+    
+<div data-role="page" id="page">
+
+	<div data-role="header" data-theme="b">
+		<h1>HTML5 Quiz</h1>
+        <a href="index.html" data-theme="a" data-icon="home" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Home</a>
+		<a href="#page03" data-theme="a" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc">Back to HTML</a>
+	</div><!-- /header -->
+
+	<div data-role="content" >	
+        <div class="quizContainer">
+            <div class="question"></div>
+            <ul class="choiceList"></ul>
+            <div class="quizMessage"></div>
+            <div class="result"></div>
+            <button type="button" class="nextButton"><span class="ui-button-text">Next Question</span></button>
+        </div>
+	</div><!-- /content -->
+    <div data-role="footer" data-theme="d">
+		<h4>Points: <a class="points_up">0</a></h4>
+	</div>
+</div><!-- /page one -->
+</body>
+</html>

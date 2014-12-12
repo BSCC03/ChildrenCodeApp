@@ -90,11 +90,31 @@ var questions = [{
     correctAnswer: 0                      
     }];
 
+var correctAnswers = JSON.parse(localStorage.getItem('gameProgress'));
 var currentQuestion = 0;
-var correctAnswers = 0;
 var quizOver = false;
 
+if(correctAnswers == null)
+    {
+        correctAnswers = 0;
+        localStorage.setItem('gameProgress',JSON.stringify(correctAnswers));
+    }
+    else
+    {
+        console.log(correctAnswers);
+    }
+
 $(document).ready(function () {
+    
+    for(var i=0;i<document.getElementsByClassName("points_up").length;i++) {
+        document.getElementsByClassName("points_up")[i].innerHTML = correctAnswers;
+        console.log(i);
+    }
+    for(var i=1;i<13;i++) {
+       if (correctAnswers >= 5*i) {
+            $('.badge'+i).css('-webkit-filter', "grayscale(0)");
+        } 
+    }
 
     // Display the first question
     displayCurrentQuestion();
@@ -115,6 +135,7 @@ $(document).ready(function () {
 
                 if (value == questions[currentQuestion].correctAnswer) {
                     correctAnswers++;
+                    localStorage.setItem('gameProgress',JSON.stringify(correctAnswers));
                 }
 
                 currentQuestion++; // Since we have already displayed the first question on DOM ready
@@ -177,11 +198,6 @@ function resetQuiz() {
 function displayScore() {
     $(document).find(".quizContainer > .result").text("You scored: " + correctAnswers + " out of: " + questions.length);
     $(document).find(".quizContainer > .result").show();
-    for(var i=0;i<document.getElementsByClassName("points_up").length;i++)
-    {
-        document.getElementsByClassName("points_up")[i].innerHTML = correctAnswers;
-        console.log(i);
-    }
     for(var i=1;i<13;i++)
     {
        if (correctAnswers == 5*i) {
